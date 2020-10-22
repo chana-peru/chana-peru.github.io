@@ -8,7 +8,7 @@ permalink: /
 
 <div class="container clearfix">
     <div class="mx-auto center clearfix" style="max-width: 900px;">
-        <img class="bottommargin" src="images/logo-side.png" alt="Image">
+        <img class="bottommargin" src="{{ "/images/logo-side.png" | prepend: site.baseurl | prepend: site.url}}" alt="Image">
         <h1>Welcome! This is <span>Canvas</span>.</h1>
         <h2>A very clean, responsive &amp; super flexible multipurpose theme that makes it easy to create a website of any category.</h2>
         <a href="#" class="button button-3d button-dark button-large ">Browse Features</a>
@@ -127,7 +127,7 @@ permalink: /
             <span>Built with passion &amp; intuitiveness in mind. Canvas is a masterclass piece of work presented to you.</span>
         </div>
         <div style="position: relative; margin-bottom: -60px;" data-height-xl="415" data-height-lg="342" data-height-md="262" data-height-sm="160" data-height-xs="102">
-            <img src="images/services/chrome.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" alt="Chrome">
+            <img src="{{ "/images/services/chrome.png" | prepend: site.baseurl | prepend: site.url}}" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" alt="Chrome">
             <img src="images/services/ipad3.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="300" alt="iPad">
         </div>
     </div>
