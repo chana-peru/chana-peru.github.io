@@ -2,3 +2,35 @@
 <script src="{{ "/js/jquery.js" | prepend: site.baseurl | prepend: site.url}}"></script>
 <script src="{{ "/js/plugins.min.js" | prepend: site.baseurl | prepend: site.url}}"></script>
 <script src="{{ "/js/functions.js" | prepend: site.baseurl | prepend: site.url}}"></script>
+
+<script src="{{ "/js/jquery.calendario.js" | prepend: site.baseurl | prepend: site.url}}"></script>
+<script src="{{ "/js/events-data.js" | prepend: site.baseurl | prepend: site.url}}"></script>
+
+<script>
+    var cal = $( '#calendar' ).calendario( {
+            onDayClick : function( $el, $contentEl, dateProperties ) {
+                for( var key in dateProperties ) {
+                    console.log( key + ' = ' + dateProperties[ key ] );
+                }
+            },
+            caldata : canvasEvents
+        } ),
+        $month = $( '#calendar-month' ).html( cal.getMonthName() ),
+        $year = $( '#calendar-year' ).html( cal.getYear() );
+
+    $( '#calendar-next' ).on( 'click', function() {
+        cal.gotoNextMonth( updateMonthYear );
+    } );
+    $( '#calendar-prev' ).on( 'click', function() {
+        cal.gotoPreviousMonth( updateMonthYear );
+    } );
+    $( '#calendar-current' ).on( 'click', function() {
+        cal.gotoNow( updateMonthYear );
+    } );
+
+    function updateMonthYear() {
+        $month.html( cal.getMonthName() );
+        $year.html( cal.getYear() );
+    };
+
+</script>
