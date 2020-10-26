@@ -3,6 +3,9 @@ layout: default
 title: Members
 permalink: /members/
 ---
+<div class="container clearfix">
+<div class="row col-mb-50">
+<div class="col-12">
 {% if site.data.members %}
 <div id="section-features" class="heading-block text-center page-section">
     <h2>Members</h2>
@@ -129,3 +132,6 @@ permalink: /members/
 </div>
 
 {% endif %}
+</div>
+</div>
+</div>
